@@ -1,0 +1,9 @@
+**/dist/
+**/node_modules/
+node_modules/
+**/npm-debug.log
+npm-debug.log
+*.sublime-workspace
+**/.DS_Store
+**/.sass-cache/
+.DS_Store
