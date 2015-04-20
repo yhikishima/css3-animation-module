@@ -6,10 +6,10 @@ var watch = require('gulp-watch');
 var webserver = require('gulp-webserver');
 
 gulp.task('stylus', function () {
-  return gulp.src('./src/stylus/*.styl')
+  gulp.src('src/stylus/*.styl')
     .pipe(plumber())
     .pipe(stylus())
-    .pipe(gulp.dest('./dist/css/index.css'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('webserver', function() {
@@ -21,7 +21,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('watch', function() {
-  watch('./src/stylus/*.stylus', function () {
+  watch('src/stylus/*.styl', function () {
     gulp.start(['stylus']);
   });
 });
